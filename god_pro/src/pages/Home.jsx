@@ -14,10 +14,9 @@ const Home = () => {
   useEffect(()=>{
     const fetchProject = async() => {
       try{
-        const token = localStorage.getItem("id");
         const response = await Axios.get(`/api/projects`,
           { 
-            headers: { Authorization: `${token}` } 
+            headers: { Authorization: `3734364008` } 
         }
         );
         setData(response.data.data);
