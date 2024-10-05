@@ -29,7 +29,6 @@ const AllWrapper = styled.div`
   align-items: center;
   margin: 0;
   padding: 0;
-  position: fixed;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 `;
 
