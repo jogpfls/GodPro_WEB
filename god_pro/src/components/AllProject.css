@@ -1,4 +1,4 @@
-.allWrapper{
+.allProject_wrapper_allWrapper{
   width: 950px;
   height: 190px;
   border-radius: 15px;
@@ -11,7 +11,7 @@
   background-color: white;
 }
 
-.wrapper{
+.allProject_wrapper{
   width: 870px;
   height: 120px;
   display: flex;
@@ -21,7 +21,7 @@
   padding: 0;
 }
 
-.topWrapper{
+.allProject_wrapper_topWrapper{
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -44,31 +44,31 @@
   font-size: 12px;
 }
 
-.text{
+.allProject_wrapper_text{
   margin: 0;
   padding: 0;
 }
 
-.count{
+.allProject_wrapper_count{
   margin: 0;
   padding: 0;
   font-size: 13px;
 }
 
-.contents{
+.allProject_wrapper_contents{
   margin: 0;
   padding: 0;
   color: #ADADAD;
   font-size: 13px;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
-.bottomWrapper{
+.allProject_wrapper_bottomWrapper{
   display: flex;
   justify-content: end;
 }
 
-.btn{
+.allProject_wrapper_btn{
   width: 130px;
   height: 40px;
   border-radius: 10px;
@@ -76,7 +76,7 @@
   border: none;
 }
 
-.btn:hover{
+.allProject_wrapper_btn:hover{
   cursor: pointer;
   background-color: #EEC2A7;
 }
