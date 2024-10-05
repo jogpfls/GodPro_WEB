@@ -44,6 +44,7 @@ const Logo = styled.img`
   width: 150px;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 `;
 
 const RightWrapper = styled.div`
@@ -54,6 +55,11 @@ const RightWrapper = styled.div`
 const MypageText = styled.p`
   margin-right: 50px;
   font-size: 15px;
+  cursor: pointer;
+
+  &:hover{
+    font-weight: 600;
+  }
 `;
 
 export default Header;
