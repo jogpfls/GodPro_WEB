@@ -4,18 +4,18 @@ import Login from './pages/Login.jsx';
 import Lookup from './pages/DetailPage/Lookup.jsx';
 import Modify from './pages/DetailPage/Modify.jsx';
 import Register from './pages/DetailPage/Register.jsx';
-import Button2 from './pages/MyPage/Button2.jsx';
-import Modify2 from './pages/MyPage/Modify2.jsx';
-import Register2 from './pages/MyPage/Register2.jsx';
-import Profile from './pages/MyPage/Profile.jsx';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
+import Button2 from './pages/Mypage/Button2.jsx';
+import Modify2 from './pages/Mypage/Modify2.jsx';
+import Register2 from './pages/Mypage/Register2.jsx';
+import Profile from './pages/Mypage/Profile.jsx';
+import { Routes, Route } from "react-router-dom";
 import SubmitCheck from './pages/SubmitCheck.jsx';
 import SubmitPerson from './pages/SubmitPerson.jsx';
 import Auth from './components/Auth.jsx';
 
 function App() {
-  const navigate = useNavigate();
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
