@@ -1,0 +1,125 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+  }
+  
+  .entire_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* 가운데 정렬 */
+	gap: 10px;
+  }
+  
+  .main_wrapper {
+	width: 950px;
+	align-items: center;
+	font-size: 15px;
+	display: flex;
+	flex-direction: column; /* 세로 방향으로 정렬 */
+	/* padding: 20px; */
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	margin-top: 80px; /* Header와의 간격 */
+	gap: 20px;
+	padding: 40px 0;
+	border-radius: 20px;
+	margin-bottom: 100px;
+  }
+  
+  .page_name {
+	margin_top : 10px;
+	font-size: 20px;
+	font-weight: bold;
+  }
+
+  .part_select_wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+  }
+  
+  .name_input {
+	cursor: pointer;
+	width: 300px;
+	height: 23px;
+	border: solid 1px #B0B0B0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 10px;
+	white-space: nowrap;
+	margin-top: 5px;
+  }
+  
+  .month_select {
+	cursor: pointer;
+	width: 345px;
+	height: 45px;
+	border: solid 1px #B0B0B0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 10px;
+	white-space: nowrap;
+	margin-top: 5px;
+  }
+  
+  .date_input {
+	cursor: pointer;
+	width: 290px;
+	height: 23px;
+	border: solid 1px #B0B0B0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 10px;
+	white-space: nowrap;
+	margin-top: 5px;
+  }
+  
+  .introduce_input {
+	cursor: pointer;
+	width: 655px;
+	height: 23px;
+	border: solid 1px #B0B0B0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 10px;
+	white-space: pre-wrap;
+	margin-top: 5px;
+  }
+  
+  .part_select {
+	cursor: pointer;
+	width: 100px;
+	height: 23px;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 10px;
+	white-space: nowrap;
+	background-color: #FAECE2;
+  }
+  
+  .datail_input {
+	cursor: pointer;
+	width: 650px;
+	height: 100px;
+	border: solid 1px #B0B0B0;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 10px;
+	white-space: pre-wrap;
+	margin-top: 5px;
+  }
+  
+  .date_wrapper {
+	display:flex;
+	flex-direction: row;
+	gap: 20px;
+  }
+  
+  .name_input_wrapper{
+	width: 690px;
+  }
+  
