@@ -9,9 +9,29 @@
 
 }
 
+.myProject_leftWrapper{
+  display: flex;
+  align-items: center;
+}
+
 .myProject_title{
   font-weight: 600;
   margin-left: 40px;
+}
+
+.myProject_submitCheck{
+  border: none;
+  margin-left: 10px;
+  height: 25px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #FAECE2;
+  font-size: 12px;
+}
+
+.myProject_submitCheck:hover{
+  background-color: #FFE6D7;
+  cursor: pointer;
 }
 
 .myProject_buttonWrapper{
