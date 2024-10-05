@@ -1,0 +1,22 @@
+.login_allWrapper{
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  gap: 100px;
+}
+
+.login_image{
+  width: 200px;
+}
+
+.login_kakaoImage{
+  width: 500px;
+}
+
+.login_kakaoImage:hover{
+  cursor: pointer;
+}
+
