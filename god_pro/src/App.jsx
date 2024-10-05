@@ -10,7 +10,6 @@ import Button2 from './pages/Mypage/Button2.jsx';
 import Modify2 from './pages/Mypage/Modify2.jsx';
 import Register2 from './pages/Mypage/Register2.jsx';
 import Profile from './pages/Mypage/Profile.jsx';
-import { Routes, Route } from "react-router-dom";
 import SubmitCheck from './pages/SubmitCheck.jsx';
 import SubmitPerson from './pages/SubmitPerson.jsx';
 import Auth from './components/Auth.jsx';
