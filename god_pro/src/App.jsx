@@ -23,7 +23,7 @@ function App() {
   return (
     <>
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home isAuthenticated={isAuthenticated}/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/detailpage/lookup" element={<Lookup />} />
             <Route path="/detailpage/modify" element={<Modify />} />

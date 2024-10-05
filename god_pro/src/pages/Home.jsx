@@ -6,11 +6,11 @@ import './Home.css';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
-const Home = () => {
+const Home = ({ isAuthenticated }) => {
   const navigate = useNavigate();
   return (
     <>
-    <Header />
+    <Header isAuthenticated={isAuthenticated}/>
     <div className='home_wrapper'>
       <div className='home_banner'>
         <div className='home_innerWrapper'>

@@ -4,7 +4,7 @@ import logo from '../assets/icon.svg';
 import Button from '../components/Button';
 import { useNavigate } from'react-router-dom';
 
-const Header = () => {
+const Header = ({ isAuthenticated }) => {
   const navigate = useNavigate();
 
   return (
@@ -13,7 +13,8 @@ const Header = () => {
         <Logo src={logo} alt="로고이미지" onClick={()=>navigate('/')}/>
         <RightWrapper>
           <MypageText onClick={()=>navigate('/mypage/button2')}>마이페이지</MypageText>
-          <Button text={'로그인'} type={'HEADERLOGIN'} onClick={() => navigate('/login')} />
+          {isAuthenticated == false ? 
+          <Button text={'로그인'} type={'HEADERLOGIN'} onClick={() => navigate('/login')} /> : <Button text={'로그아웃'} type={'HEADERLOGIN'}/>}
         </RightWrapper>
       </Wrapper>
     </AllWrapper>

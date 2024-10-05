@@ -4,7 +4,8 @@ const endpoint = import.meta.env.VITE_BE_ENDPOINT;
 const baseUrl = `${endpoint}/oauth`;
 
 export const getKakaoLoginUrl = async () => {
-  const response = await axios.get(`http://ec2-52-79-227-211.ap-northeast-2.compute.amazonaws.com:8080/oauth/login`);
+    const response = await axios.get(`${baseUrl}/login`);
+//   const response = await axios.get(`http://ec2-52-79-227-211.ap-northeast-2.compute.amazonaws.com:8080/oauth/login`);
   return response.data.data;
 };
 
