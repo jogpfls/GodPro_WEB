@@ -1,0 +1,260 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.entire_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가운데 정렬 */
+  gap: 10px;
+}
+
+.main_wrapper {
+  width: 950px;
+  align-items: center;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  /* padding: 20px; */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 80px; /* Header와의 간격 */
+  gap: 20px;
+  padding: 40px 0;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+.part_select_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.lookup_name_input {
+  width: 300px;
+  height: 45px;
+  border: solid 1px #B0B0B0;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 13px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.lookup_month {
+  width: 300px;
+  height: 45px;
+  border: 1px solid #B0B0B0;
+  border-radius: 10px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.lookup_date_input {
+  width: 300px;
+  height: 45px;
+  border: solid 1px #B0B0B0;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 13px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.lookup_introduce_input {
+  width: 665px;
+  height: 45px;
+  border: solid 1px #B0B0B0;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 13px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.lookup_part_select {
+  width: 100px;
+  height: 23px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 12px;
+  white-space: nowrap;
+  background-color: #FAECE2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.lookup_datail_input {
+  width: 665px;
+  height: 100px;
+  border: solid 1px #B0B0B0;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.date_wrapper {
+  display:flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.name_input_wrapper{
+  width: 700px;
+}
+
+.lookup_submitWrapper{
+    width: 950px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.lookup_apply_title{
+  font-weight: 600;
+  margin: 5px;
+}
+
+.lookup_applyPart{
+  width: 660px;
+  height: 45px;
+  border-radius: 10px;
+  border: solid 1px #B0B0B0;
+  padding: 0 20px;
+  outline: none;
+}
+.lookup_Motivation{
+  width: 660px;
+  height: 45px;
+  border-radius: 10px;
+  border: solid 1px #B0B0B0;
+  padding: 0 20px;
+  outline: none;
+}
+.lookup_contactLink{
+  width: 660px;
+  height: 45px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: solid 1px #B0B0B0;
+  padding: 0 20px;
+  outline: none;
+}
+
+.lookup_bigTitle{
+  font-size: 23px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+
+/* .name_input {
+  cursor: pointer;
+  width: 250px;
+  height: 23px;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.month_select {
+  cursor: pointer;
+  width: 250px;
+  height: 23px;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.date_input {
+  cursor: pointer;
+  width: 250px;
+  height: 23px;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.text_input {
+  cursor: pointer;
+  width: 650px;
+  height: 23px;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.part_select {
+  cursor: pointer;
+  width: 50px;
+  height: 23px;
+  border: solid 1px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.part_select_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.select_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.name_wrapper{
+  width: 300px;
+  height: 50px;
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.title{
+  margin-left: 10px;
+}
+
+.inputInput{
+  margin-right: 10px;
+  outline: none;
+  padding-left: 10px;
+} */
+
+
+
+/* background-color: #fff; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
