@@ -1,0 +1,82 @@
+.allProject_wrapper_allWrapper{
+  width: 950px;
+  height: 190px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 2px 2px #EAEAEA;
+  background-color: white;
+}
+
+.allProject_wrapper{
+  width: 870px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.allProject_wrapper_topWrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+}
+
+.employWrapper{
+  background-color: #EBFFF9;
+  width: 36px;
+  border: 1px solid #009C6F;
+  border-radius: 7px;
+  padding: 2px 4px 2px 4px;
+}
+
+.employText{
+  margin: 0;
+  padding: 0;
+  color: #009C6F;
+  font-size: 12px;
+}
+
+.allProject_wrapper_text{
+  margin: 0;
+  padding: 0;
+}
+
+.allProject_wrapper_count{
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.allProject_wrapper_contents{
+  margin: 0;
+  padding: 0;
+  color: #ADADAD;
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+.allProject_wrapper_bottomWrapper{
+  display: flex;
+  justify-content: end;
+}
+
+.allProject_wrapper_btn{
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #F7CFB6;
+  border: none;
+}
+
+.allProject_wrapper_btn:hover{
+  cursor: pointer;
+  background-color: #EEC2A7;
+}
