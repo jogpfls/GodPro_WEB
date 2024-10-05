@@ -44,3 +44,20 @@
   flex-direction: column;
   gap: 40px;
 }
+
+.home_button{
+  width: 300px;
+  height: 60px;
+  background-color: #F7CFB6;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.home_button:hover{
+  background-color: #F0CAB2;
+  cursor: pointer;
+}
