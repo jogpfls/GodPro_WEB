@@ -8,12 +8,18 @@ import Button2 from './pages/MyPage/Button2.jsx';
 import Modify2 from './pages/MyPage/Modify2.jsx';
 import Register2 from './pages/MyPage/Register2.jsx';
 import Profile from './pages/MyPage/Profile.jsx';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import SubmitCheck from './pages/SubmitCheck.jsx';
 import SubmitPerson from './pages/SubmitPerson.jsx';
+import Auth from './components/Auth.jsx';
 
 function App() {
   const navigate = useNavigate();
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
+
 
   return (
     <>
@@ -29,6 +35,7 @@ function App() {
             <Route path="/mypage/register2" element={<Register2 />} />
             <Route path="/mypage/submitCheck" element={<SubmitCheck />}/>
             <Route path="/mypage/submit_check/person" element={<SubmitPerson/>}/>
+            <Route path="/auth" element={<Auth setUser={setUser} setIsAuthenticated={setIsAuthenticated}/>} />
         </Routes>
     </>
   )
