@@ -40,7 +40,7 @@ function App() {
         const response = await axios.post(`${baseUrl}/api/projects`, newProject, config);
 
         // 성공적으로 백엔드에 저장된 경우
-        console.log('Toilet saved successfully:', response.data);
+        console.log('Project saved successfully:', response.data);
 
         // 상태 업데이트 및 페이지 이동
         setProject(prevProjects => [...prevProjects, newProject]);
