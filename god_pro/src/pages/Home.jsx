@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import AllProject from '../components/AllProject';
 import bannerImg from '../images/image.svg'
 import './Home.css';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
+import { Axios } from '../api/Axios';
 
-const Home = ({ project }) => {
+const Home = () => {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+    const fetchProject = async() => {
+      try{
+        const response = await Axios.get(`/api/projects`,
+          { 
+            headers: { Authorization: `3734364008` } 
+        }
+        );
+        setData(response.data.data);
+        console.log("내가 성공: ", data);
+      }
+      catch(error){
+        console.error("실패: ", error);
+      }
+    }
+    fetchProject();
+  }, [])
   return (
     <>
     <Header />
@@ -27,61 +47,19 @@ const Home = ({ project }) => {
       <div>
       <p className='home_text'>기본 정렬 순</p>
         <div className='home_projectWrapper'>
-          <AllProject />
-          <AllProject />
-          <AllProject />
+          {data.map((datas)=>
+          <>
+          <AllProject 
+          name={datas.name}
+          shortDescription={datas.shortDescription}
+          />
+          </>
+        )}
         </div>
       </div>
     </div>
     </>
   );
 };
-
-const Wrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Banner = styled.div`
-  background-color: #FAECE2;
-  width: 100%;
-  height: 350px;
-  margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const InnerWrapper = styled.div`
-  display: flex;
-  width: 950px;
-  justify-content: space-between;
-`;
-
-const TitleText = styled.p`
-  font-size: 25px;
-  font-weight: 600;
-`;
-
-const BannerImage = styled.img`
-  width: 400px;
-`;
-
-const Text = styled.p`
-  width: 100%;
-  text-align: end;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
-`;
-
-const ProjectWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-`;
 
 export default Home;
