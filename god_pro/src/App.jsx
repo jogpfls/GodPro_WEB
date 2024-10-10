@@ -1,13 +1,10 @@
 import './App.css'
-import Home from './pages/Home';
-import Login from "./pages/Login";
-import Lookup from "./pages/DetailPage/Lookup";
-import Modify from "./pages/DetailPage/Modify";
-import Register from "./pages/DetailPage/Register";
-import Button2 from "./pages/MyPage/Button2";
-import Modify2 from "./pages/MyPage/Modify2";
-import Register2 from "./pages/MyPage/Register2";
-import Profile from "./pages/MyPage/Profile";
+import Home from './pages/Home.jsx';
+import Login from './pages/Login.jsx';
+import Lookup from './pages/DetailPage/Lookup.jsx';
+import Modify from './pages/DetailPage/Modify.jsx';
+import Register from './pages/DetailPage/Register.jsx';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Button2 from './pages/Mypage/Button2.jsx';
 import Modify2 from './pages/Mypage/Modify2.jsx';
@@ -69,7 +66,7 @@ function App() {
   return (
     <>
         <Routes>
-            <Route path="/" element={<Home isAuthenticated={isAuthenticated} project={project}/>} />
+            <Route path="/" element={<Home isAuthenticated={isAuthenticated}/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/detailpage/lookup" element={<Lookup />} />
             <Route path="/detailpage/modify" element={<Modify />} />
@@ -80,6 +77,7 @@ function App() {
             <Route path="/mypage/register2" element={<Register2 />} />
             <Route path="/mypage/submitCheck" element={<SubmitCheck />}/>
             <Route path="/mypage/submit_check/person" element={<SubmitPerson/>}/>
+            <Route path="/auth" element={<Auth setUser={setUser} setIsAuthenticated={setIsAuthenticated}/>} />
         </Routes>
     </>
   )
