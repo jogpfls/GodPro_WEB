@@ -1,8 +1,61 @@
 import Header from '../../components/Header';
 import './Register.css';
 import Button from '../../components/Button';
+import React, { useRef, useImperativeHandle, useState } from 'react';
+import axios from 'axios';
 
-const Register = () => {
+
+const Register = ({ addProject }) => {
+	const inputProjectRef = useRef();
+
+	const [values, setValues] = useState({
+        name: '',
+		shortDescription: '',
+		detailDescription: '',
+		back: '3',
+		front: '4',
+		pm: '1',
+		design: '2',
+		eta: '',
+		recruitmentEndDate: '',
+    });
+
+	const handleSubmit = () => {
+        if (inputProjectRef.current) {
+            inputProjectRef.current.handleSubmit();
+        }
+    };
+
+	const handleChange = (e) => {
+        const { name, value } = e.target;
+        setValues(prevValues => ({
+            ...prevValues,
+            [name]: value
+        }));
+    };
+
+
+	useImperativeHandle(inputProjectRef, () => ({
+        handleSubmit: () => {
+            if (!values.name.trim() || !values.shortDescription.trim() || !values.detailDescription.trim()) {
+                alert('필수 필드를 모두 채워주세요.');
+                return;
+            }
+            addProject(values);
+            setValues({
+                name: '',
+                shortDescription: '',
+                detailDescription: '',
+                back: '3',
+                front: '4',
+				pm: '1',
+                design: '2',
+                eta: '',
+				recruitmentEndDate: '',
+            });
+        }
+    }));
+
 	return (
 		<div className="entire_wrapper">
 			<Header />
@@ -11,7 +64,10 @@ const Register = () => {
 				<div className="page_name">프로젝트 등록하기</div>
 				<div className="name_input_wrapper">
 					<div>프로젝트 이름</div>
-					<input type="text" className="name_input"/>	
+					<input type="text" className="name_input"
+					name="name"
+					value={values.name}
+					onChange={handleChange}/>	
 				</div>
 				<div className="date_wrapper">
 					<div className="month_select_wrapper">
@@ -28,12 +84,24 @@ const Register = () => {
 					</div>
 					<div className="date_input_wrapper">
 						<div>모집 마감 날짜 선택하기</div>
-						<input type="date" className="date_input" />
+						<input 
+							type="date" 
+							className="date_input"
+							name="recruitmentEndDate"
+							value={values.recruitmentEndDate}
+							onChange={handleChange}
+						/>
 					</div>
 				</div>
 				<div className="introduce_input_wrapper">
 					<div>한줄 소개</div>
-					<input type="text" className="introduce_input" />	
+					<input 
+						type="text" 
+						className="introduce_input"
+						name="shortDescription"
+                    	value={values.shortDescription}
+						onChange={handleChange}
+					/>	
 				</div>
 				<div className="introduce_input_wrapper">
 					<div>필요 업무 / 파트</div>
@@ -54,9 +122,16 @@ const Register = () => {
 				</div>
 				<div className="datail_input_wrapper">
 					<div>프로젝트 설명</div>
-					<input type="textarea" placeholder="프로젝트에 대해 설명해주세요" className="datail_input"/>	
+					<input 
+						type="textarea" 
+						placeholder="프로젝트에 대해 설명해주세요" 
+						className="datail_input"
+						name="detailDescription"
+                    	value={values.detailDescription}
+						onChange={handleChange}
+					/>	
 				</div>
-				<Button text="등록하기"/>
+				<Button text="등록하기" onClick={handleSubmit}/>
 			</div>
 			</div>
 		</div>
